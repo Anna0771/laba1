@@ -76,7 +76,7 @@ while running:
                 if tile == 'E':  # если выход
                     running = False  # заканчиваем игру
 
-    screen.fill(WHITE)  # заливаем фон белым
+    screen.fill(WHITE)
 
     # Рисуем карту
     for y, row in enumerate(map):
