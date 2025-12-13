@@ -37,8 +37,10 @@ for y, row in enumerate(game_map):
 
 running = True  # игра работает
 
+
+# Игровой цикл
 while running:
-    for event in pygame.event.get():  # проверяем все события (нажатия, закрытия)
+    for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
@@ -63,12 +65,12 @@ while running:
                     game_map[new_y] = (
                         game_map[new_y][:new_x]
                         + " "
-                        + game_map[new_y][new_x + 1 :]
+                        + game_map[new_y][new_x + 1:]
                     )
                 if tile == "E":
                     running = False
 
-    # ==== ОТРИСОВКА КАЖДЫЙ КАДР ====
+    # Отрисовка каждый кадр
     screen.fill((0, 0, 0))
 
     for y, row in enumerate(game_map):
